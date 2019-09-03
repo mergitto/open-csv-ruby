@@ -16,7 +16,7 @@ def uncompress_file(link_name, output_file_name)
       tmp = Tempfile.new
       begin
         File.write(tmp, buffer)
-        CSV.read(tmp, headers: true, encoding: "CP932:UTF-8").each do |row|
+        CSV.read(tmp, headers: true, encoding: 'CP932:UTF-8').each do |row|
           begin
             p row['農薬の種類']
           rescue => error
